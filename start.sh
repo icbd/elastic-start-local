@@ -3,6 +3,8 @@
 # More information: https://github.com/elastic/start-local
 set -eu
 
+echo "Using image: ${ES_IMAGE_NAME}:${ES_LOCAL_VERSION}"
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd ${SCRIPT_DIR}
 today=$(date +%s)
