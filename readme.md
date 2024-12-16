@@ -3,7 +3,8 @@
 ## build new image
 
 ```sh
-docker build -t es-ik-kuromoji:8.16.0 .
+echo "docker image tag: \"${ES_IMAGE_NAME}:${ES_LOCAL_VERSION}\""
+docker build -t "${ES_IMAGE_NAME}:${ES_LOCAL_VERSION}" .
 ```
 
 ## Refs
