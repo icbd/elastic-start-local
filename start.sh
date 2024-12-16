@@ -46,3 +46,5 @@ if [ ! -n "${ES_LOCAL_LICENSE:-}" ] && [ "$today" -gt 1736684943 ]; then
   echo
 fi
 docker compose up --wait
+
+curl -H "Authorization: ApiKey ${ES_LOCAL_API_KEY}" "$ES_LOCAL_URL"
