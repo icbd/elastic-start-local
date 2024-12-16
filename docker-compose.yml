@@ -1,7 +1,7 @@
 services:
   elasticsearch:
     # image: docker.elastic.co/elasticsearch/elasticsearch:${ES_LOCAL_VERSION}
-    image: es-ik:${ES_LOCAL_VERSION}
+    image: ${ES_IMAGE_NAME}:${ES_LOCAL_VERSION}
     container_name: ${ES_LOCAL_CONTAINER_NAME}
     volumes:
       - dev-elasticsearch:/usr/share/elasticsearch/data
@@ -36,7 +36,7 @@ services:
     depends_on:
       elasticsearch:
         condition: service_healthy
-    image: es-ik:${ES_LOCAL_VERSION}
+    image: ${ES_IMAGE_NAME}:${ES_LOCAL_VERSION}
     container_name: kibana_settings
     restart: 'no'
     command: >

@@ -3,7 +3,7 @@
 ## build new image
 
 ```sh
-docker build -t es-ik:8.16.0 .
+docker build -t es-ik-kuromoji:8.16.0 .
 ```
 
 ## Refs
