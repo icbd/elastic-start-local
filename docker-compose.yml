@@ -74,6 +74,14 @@ services:
       timeout: 10s
       retries: 20
 
+  cerebro:
+    image: lmenezes/cerebro:latest
+    container_name: cerebro
+    ports:
+      - "9000:9000"
+    command:
+      - -Dhosts.0.host=http://elasticsearch:9200 -Dhosts.0.auth.username=elastic -Dhosts.0.auth.password=${ES_LOCAL_PASSWORD}
+
 volumes:
   dev-elasticsearch:
   dev-kibana:
